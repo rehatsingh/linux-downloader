@@ -3,9 +3,12 @@
  download ()
  {
     cd $HOME/build/linux
-    echo -e "removing old tarball and build directory...\n"
-    $root rm linux-$linuxver.tar.xz
-    $root rm -rf linux-$linuxver
+    read -e -p "remove old tarball and build directory before downloading? [Y|n]:" -i "y" -n1 rm
+    if [ $rm == y ]; then
+      echo -e "removing old tarball and build directory...\n"
+      $root rm linux-$linuxver.tar.xz
+      $root rm -rf linux-$linuxver
+    fi
 
     echo "downlidng..."
     wget $link && echo $ver > /home/rehat/build/linux/ver/downloaded
