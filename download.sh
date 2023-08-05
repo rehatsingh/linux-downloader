@@ -9,7 +9,6 @@
       $root rm linux-$linuxver.tar.xz
       $root rm -rf linux-$linuxver
     fi
-
     echo "downlidng..."
     wget $link && echo $ver > /home/rehat/build/linux/ver/downloaded
     echo -e "downloded\n"
@@ -73,15 +72,13 @@ if [ "$downloaded" == "$ver" ] ; then
   
   echo "Alredy using the latest stable relese" 
   #echo "tarbal should be in /home/rehat/build/linux"
-  echo "Still contineu?"
   else
     echo "alredy downloaded the latest stable relese"
-    echo "tarbal should be in /home/rehat/build/linux"
-    echo "Still contineu?"
+    echo "tarbal should be in $HOME/build/linux"
   fi
-  echo "(d)ownload, (e)xtract, (m)rproper, extract and mrproper(em), download and extract(de) or do it (a)ll again:"
 
-  read again
+  echo "Still continue?"
+  read -p "download again (d), extract again (e), run mrproper again (m), download and extract again (de), extract and mrproper again (em), do everything again (a):" again
 
   case "$again" in
     d) download
