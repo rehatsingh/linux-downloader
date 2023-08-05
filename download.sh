@@ -57,6 +57,7 @@ fi
 
 export ver=$(echo "$link" | cut -d '.' -f 4-6 | cut -c 9-13)
 linuxver=$(cat /$HOME/build/linux/ver/installed)
+downloaded=$(cat /$HOME/build/linux/ver/downloaded)
 sleep 1
 
 
@@ -64,10 +65,17 @@ echo "The latest version is linux $ver"
 echo -e "You are using $linuxver\n"
 sleep 1
 
-if [ "$linuxver" == "$ver" ] ; then
+if [ "$downloaded" == "$ver" ] ; then
+  if [ "$linuxver" == "$ver" ] ; then
   
-  echo -e "Alredy usint the latest stable relese \nThe tarbal should be in /home/rehat/build/linux/\n"
+  echo "Alredy using the latest stable relese" 
+  #echo "tarbal should be in /home/rehat/build/linux"
   echo "Still contineu?"
+  else
+    echo "alredy downloaded the latest stable relese"
+    echo "tarbal should be in /home/rehat/build/linux"
+    echo "Still contineu?"
+  fi
   echo "(d)ownload, (e)xtract, (m)rproper, extract and mrproper(em), download and extract(de) or do it (a)ll again:"
 
   read again
@@ -99,6 +107,6 @@ if [ "$linuxver" == "$ver" ] ; then
 
     download
     extract
-    mrporper
+    mrproper
     formality
 fi
