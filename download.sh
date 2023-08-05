@@ -5,8 +5,9 @@
     cd $HOME/build/linux
     read -p "remove old tarball and build directory before downloading? [Y|n]:" -n1 rm
     rm=${rm:-y}
+    echo
     if [ $rm == y ]; then
-      echo -e "removing old tarball and build directory...\n"
+      echo "removing old tarball and build directory..."
       $root rm linux-$linuxver.tar.xz
       $root rm -rf linux-$linuxver
     fi
