@@ -1,5 +1,6 @@
 # linux-downloader
 automatically download linux tarball for compilation
+
 tested on arch but the download script should work on all distros
 
 this script tries to copy .config from /home/user/build/linux so keep your .config there
