@@ -9,16 +9,19 @@ ver=$(cat $HOME/build/linux/ver/downloaded)
 echo "linux $ver"
 sleep 1
 
+echo
 echo "coppying kernel to boot directory..."
 cp $HOME/build/linux/linux-$ver/arch/x86_64/boot/bzImage /boot/vmlinuz-$USER
 echo "coppied"
 sleep 1
 
+echo
 echo "building dynamic kernel modules (nvidia modules)..."
 dkms autoinstall -k $ver
 echo "built"
 sleep 1
 
+echo
 echo "building initramfs"
 mkinitcpio -k $ver -g /boot/initramfs-$USER.img
 echo "built"
@@ -26,6 +29,7 @@ sleep 1
 
 echo "$ver" > $HOME/build/linux/ver/installed
 
+echo
 echo "Reboot to automaticly use the newly compiled and installed kernell"
 echo "And pat yourself on the back"
 echo "I am proud of you, owner."

@@ -59,7 +59,7 @@ then
     root=sudo
 fi
 
-export ver=$(echo "$link" | cut -d '.' -f 4-6 | cut -c 9-13)
+export ver=$(echo "$link" | cut -d '-' -f 2 | cut -d '.' -f 1-3)
 linuxver=$(cat /$HOME/build/linux/ver/installed)
 downloaded=$(cat /$HOME/build/linux/ver/downloaded)
 sleep 1
