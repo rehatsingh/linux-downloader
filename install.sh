@@ -10,9 +10,9 @@ echo "linux $ver"
 sleep 1
 
 echo
-echo "coppying kernel to boot directory..."
+echo "copying kernel to boot directory..."
 cp $HOME/build/linux/linux-$ver/arch/x86_64/boot/bzImage /boot/vmlinuz-$USER
-echo "coppied"
+echo "copied"
 sleep 1
 
 echo
