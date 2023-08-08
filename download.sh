@@ -61,12 +61,12 @@ then
   else
     root=sudo
 fi
-export ver=$(echo "$link" | cut -d '-' -f 2 | cut -d '.' -f 1-3)
 linuxver=$(cat /$HOME/build/linux/ver/installed)
 downloaded=$(cat /$HOME/build/linux/ver/downloaded)
 
 echo "parsing link..."
 export link=$(wget --output-document - -q https://www.kernel.org/ | grep -A 1 latest_link | grep http | cut -d'"' -f2)
+export ver=$(echo "$link" | cut -d '-' -f 2 | cut -d '.' -f 1-3)
 echo "done"
 
 sleep 1
