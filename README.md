@@ -4,6 +4,7 @@ automatically download linux tarball for compilation
 tested on arch but the download script should work on all distros
 
 this script tries to copy .config from /home/user/build/linux so keep your .config there
+
 it is recommended to do this manually at least once to familiarize yourself with the process
 
 if you have an nvidia gpu remove the nvidia package and install nvidia-dkms (arch)
