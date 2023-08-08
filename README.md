@@ -23,7 +23,7 @@ the install script copies the bzimage to /boot, installs dynamic kernel modules 
 
 the install script looks at the passwd file to get the username and home directory of UID 1000 and uses that. so if there are multiple users or your UID is different edit the script accordingly
 
-the install script does NOT regenerate the grub config. I use systendboot.
+the install script does NOT regenerate the grub config. I use systemdboot.
 
 
-I just want to clarify that this is my first bash script and GitHub project. I assure you that I have put in my best effort, and I greatly appreciate your support.
+I am proud to share my first bash script and GitHub project with you. I have put my best effort into it, and your support is greatly appreciated.
