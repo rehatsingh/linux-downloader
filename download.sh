@@ -52,7 +52,7 @@
     echo "Run 'make -j$(nproc)' and 'make modules_install' as root to build
     (preferably in a tty when you're not using the computer)"
     echo "Optionaly use the time command before those two commands to know how long it took to build"
-    echo "After build rund the post install script as root to install the kernel and nvidia drivers"
+    echo "After build run the post install script as root to install the kernel and nvidia drivers"
 }
  #link="https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.4.7.tar.xz"
 if hash doas
